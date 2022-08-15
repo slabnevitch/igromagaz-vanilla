@@ -413,7 +413,7 @@ jQuery(function() {
 			slidesPerView: 1,
 			//spaceBetween: 0,
 			//autoHeight: true,
-			//speed: 800,
+			speed: 1600,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			//loop: true,
@@ -442,6 +442,36 @@ jQuery(function() {
 		});
 	}
 //---------------END Swiper
+
+
+	if(document.querySelector('.tiny-slider') !== null){
+		var slider = tns({
+			container: '.tiny-slider',
+			items: 1,
+	    // autoplay: true,
+	    gutter: 30,
+	    slideBy: 'page',
+	    mouseDrag: true,
+	    speed: 500,
+	    loop: false,
+	    nav: false,
+	    controlsContainer: '.hits.carouseled .block-header__nav', // внутри .block-header__nav должны быть 2 заранее отстилизованные кнопки
+	    responsive: {
+	    	601: {
+	    		items: 2
+	    	},
+	    	992: {
+	    		items: 3
+	    	},
+	    	1201: {
+	    		items: 4
+	    	}
+	    }
+
+	  });
+
+	}
+
 		
 	}); //END jquery document ready
 	

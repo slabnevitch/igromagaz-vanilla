@@ -13,7 +13,7 @@
 
 
 	.wrapper
-		.product-cards-slider.hits-slider
+		//- .product-cards-slider.hits-slider
 			- for (var i=0; i < 5; i++)
 				if !i%2 > 0
 					div(class="product-card")
@@ -77,3 +77,72 @@
 								.product-price__standart 2549 руб.
 
 							a(href="#").product-card__buy.btn.btn-bg-green Купить
+
+
+		.tiny-slider.hits-slider
+			- for (var i=0; i < 5; i++)
+				if !i%2 > 0
+					.tiny-slider__slide
+						div(class="product-card")
+							.product-card__header
+								.product-like
+									+icon('heart-full')
+								.sale-label -15%
+
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+						
+							.product-availability В наличии
+							
+							a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							
+							.product-card__bottom
+								.product-price
+									.product-price__old
+										.product-price__fail 2749 руб.
+									.product-price__standart.product-price__standart--sale 2549 руб.
+
+								a(href="#").product-card__buy.btn.btn-bg-green Купить
+				
+
+				else if i==2
+					.tiny-slider__slide
+						div(class="product-card liked")
+							.product-card__header
+								.product-like
+									+icon('heart-full')
+								.sale-label -15%
+
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+						
+							.product-availability В наличии
+							
+							a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							
+							.product-card__bottom
+								.product-price
+									.product-price__old
+										.product-price__fail 2749 руб.
+									.product-price__standart.product-price__standart--sale 2549 руб.
+
+								a(href="#").product-card__buy.btn.btn-bg-green Купить
+				else 	
+					.tiny-slider__slide
+						.product-card
+							.product-card__header
+								.product-like
+									+icon('heart-full')
+
+							a(href="#").product-img
+								img(src="img/prod-card-img.jpg" alt="alt")
+						
+							.product-availability В наличии
+							
+							a(href="#").product-title Карта оплаты World of Warcraft – 60 дней RU (ключ для ПК)
+							
+							.product-card__bottom
+								.product-price
+									.product-price__standart 2549 руб.
+
+								a(href="#").product-card__buy.btn.btn-bg-green Купить

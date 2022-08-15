@@ -1,0 +1,24 @@
+.popup{
+	position: relative;
+	margin: 0 auto;
+	background: #FFFFFF;
+border-radius: 20px;
+}
+.popup-add-cart{
+	max-width: 373px;
+	padding: 46px 30px 43px 30px;
+}
+.popup-add-cart__icon{
+	text-align: center;
+	margin-bottom: 25px;
+	.icon{
+		font-size: 50px;
+		color: $green;
+	}
+}
+.popup-add-cart__title{
+	text-align: center;
+	font-family: $semi;
+	font-size: 20px;
+line-height: 24px;
+}

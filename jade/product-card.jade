@@ -49,7 +49,23 @@ block content
 										- for (var i=0; i < 5; i++)
 											.page-card__slide-nav._fit
 												img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
-						
+
+									+swiper('swiper-car-slider', false, false, true)
+										- for (var i=0; i < 5; i++)
+											.swiper-car-slider.swiper-slide._fit
+												if i==0
+													img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
+												else
+													img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
+
+									+swiper('swiper-nav-slider', false, false, true)
+										- for (var i=0; i < 5; i++)
+											.swiper-nav-slider__slide.swiper-slide._fit
+												if i==0
+													img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
+												else
+													img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
+							
 							.page-card__params.params-page-card
 								.params-page-card__picts
 									- for (var i=0; i < 3; i++)
@@ -369,7 +385,7 @@ block page-scripts
 	//- script(src="js/libs/micromodal/micromodal.js")	
 		
 	//- swiper--------------------------
-	//- script(src="js/libs/swiper/swiper.min.js")
+	script(src="js/libs/swiper/swiper-bundle.min.js")
 
 	//- noUiSlider--------------------------
 	//- script(src="js/libs/noUiSlider/nouislider.min.js")

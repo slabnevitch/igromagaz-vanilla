@@ -399,8 +399,8 @@ jQuery(function() {
 		});
 
 		//---------------Swiper
-		if(document.querySelector('.swiper') !== null){
-			const swiper = new Swiper('.swiper', {
+		if(document.querySelector('.main-slider .swiper') !== null){
+			const swiper = new Swiper('.main-slider .swiper', {
 		  // fadeEffect: { crossFade: true },
 			effect: 'fade',
 			// autoplay: {
@@ -471,6 +471,33 @@ jQuery(function() {
 	  });
 
 	}
+
+	//---------------Swiper
+if(document.querySelector('.page-card__screen') !== null){
+	const swiperNav = new Swiper('.swiper-nav-slider', {
+		slidesPerView: 4,
+	  loop: true,
+	  // Navigation arrows
+	  navigation: {
+	  	nextEl: '.swiper-button-next',
+	  	prevEl: '.swiper-button-prev',
+	  }
+	});
+  const swiperScreen = new Swiper('.swiper-car-slider', {
+		slidesPerView: 1,
+	  loop: true,
+	  thumbs: {
+	  	swiper: swiperNav
+	  },
+	  // Navigation arrows
+	  navigation: {
+	  	nextEl: '.swiper-button-next',
+	  	prevEl: '.swiper-button-prev',
+	  }
+	});
+
+}
+//---------------END Swiper
 
 		
 	}); //END jquery document ready

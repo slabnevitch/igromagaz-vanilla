@@ -10,8 +10,8 @@ mixin menu(className, items)
 				a(href="#" class=className + '__link')= item
 
 //- вызов, например: +swiper(true, false, true)
-mixin swiper(pagination, scrollbar, navigation)
-	.swiper
+mixin swiper(classname, pagination, scrollbar, navigation)
+	div(class="swiper" + " " + classname)
 		.swiper-wrapper
 			if block
 				block

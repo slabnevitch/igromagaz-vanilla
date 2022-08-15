@@ -35,36 +35,37 @@ block content
 									.slider-next
 										+icon('arrow-next')
 
-									.page-card__slider
+									//- .page-card__slider
 										- for (var i=0; i < 5; i++)
 											.page-card__slide._fit
 												if i==0
 													img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
 												else
 													img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
-										// .page-card__slide._fit
-										// 	a(class="owl-video" href="http://www.youtube.com/watch?v=vlVSJ0AvZe0" style="display: none;")
 
-									.page-card__slider-nav
+									//- .page-card__slider-nav
 										- for (var i=0; i < 5; i++)
 											.page-card__slide-nav._fit
 												img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
 
-									+swiper('swiper-car-slider', false, false, true)
-										- for (var i=0; i < 5; i++)
-											.swiper-car-slider.swiper-slide._fit
-												if i==0
-													img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
-												else
-													img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
+									.swiper-car-slider-wrapper
+										+swiper('swiper-car-slider', false, false, true)
+											- for (var i=0; i < 5; i++)
+												.swiper-car-slider__slide.swiper-slide
+													._fit
+														if i==0
+															img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
+														else
+															img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
 
 									+swiper('swiper-nav-slider', false, false, true)
 										- for (var i=0; i < 5; i++)
-											.swiper-nav-slider__slide.swiper-slide._fit
-												if i==0
-													img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
-												else
-													img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
+											.swiper-nav-slider__slide.swiper-slide
+												._fit
+													if i==0
+														img._fit-img(src="img/product-card-page/slider-big.jpg" alt="alt")
+													else
+														img._fit-img(src="img/product-card-page/slider-navs/" + (i+1) + ".jpg" alt="alt")
 							
 							.page-card__params.params-page-card
 								.params-page-card__picts

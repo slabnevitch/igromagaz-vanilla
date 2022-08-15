@@ -476,23 +476,26 @@ jQuery(function() {
 if(document.querySelector('.page-card__screen') !== null){
 	const swiperNav = new Swiper('.swiper-nav-slider', {
 		slidesPerView: 4,
-	  loop: true,
+	  loop: false,
+	  spaceBetween: 10,
 	  // Navigation arrows
+	  navigation: false,
 	  navigation: {
 	  	nextEl: '.swiper-button-next',
 	  	prevEl: '.swiper-button-prev',
 	  }
 	});
+
   const swiperScreen = new Swiper('.swiper-car-slider', {
 		slidesPerView: 1,
-	  loop: true,
+	  loop: false,
 	  thumbs: {
 	  	swiper: swiperNav
 	  },
 	  // Navigation arrows
 	  navigation: {
-	  	nextEl: '.swiper-button-next',
-	  	prevEl: '.swiper-button-prev',
+	  	nextEl: '.page-card__screen .slider-prev',
+	  	prevEl: '.page-card__screen .slider-next',
 	  }
 	});
 

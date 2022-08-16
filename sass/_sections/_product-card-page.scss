@@ -617,25 +617,25 @@ line-height: 22px;
 
 }
 .product-info__tabs-list {
-	// display: flex;
+	display: flex;
 	margin-bottom: 27px;
 	// white-space: nowrap;
-		@include max-screen($md){
-			margin-right: -20px;
-		}
+	// 	@include max-screen($md){
+	// 		margin-right: -20px;
+	// 	}
 
-	.slick-list{
-		@include max-screen($md){
-			padding-right: 10%;
-		}  
-	}
-	.slick-track{
-		@include min-screen($md){
-			display: flex;
-			width: 100% !important;
-			transform: none !important;
-		}  
-	}
+	// .slick-list{
+	// 	@include max-screen($md){
+	// 		padding-right: 10%;
+	// 	}  
+	// }
+	// .slick-track{
+	// 	@include min-screen($md){
+	// 		display: flex;
+	// 		width: 100% !important;
+	// 		transform: none !important;
+	// 	}  
+	// }
 }
 .tabs__item {}
 .product-info__tabs-item {

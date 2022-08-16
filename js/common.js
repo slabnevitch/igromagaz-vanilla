@@ -320,34 +320,34 @@ jQuery(function() {
 
 
 		// product-info tabs slider
-		if($('.product-info__tabs-list').length > 0 && $('.product-info__tabs-content').length > 0){
-			$('.product-info__tabs-list').slick({
-				  slidesToShow: 1,
-				  slidesToScroll: 1,
-				  arrows:false,
-				  infinite: false,
-				  dots: false,
-				  asNavFor: '.product-info__tabs-content'
-				});
+		// if($('.product-info__tabs-list').length > 0 && $('.product-info__tabs-content').length > 0){
+		// 	$('.product-info__tabs-list').slick({
+		// 		  slidesToShow: 1,
+		// 		  slidesToScroll: 1,
+		// 		  arrows:false,
+		// 		  infinite: false,
+		// 		  dots: false,
+		// 		  asNavFor: '.product-info__tabs-content'
+		// 		});
 
-			$('.product-info__tabs-content').slick({
-			  slidesToShow: 1,
-			  slidesToScroll: 1,
-			  arrows:false,
-				dots: false,
-			  infinite: false,
-			  asNavFor: '.product-info__tabs-list',
-			  focusOnSelect: true,
-			  responsive: [
-					{
-						breakpoint: 991,
-						settings: {
-			  				adaptiveHeight: true
-						}	
-					}
-				]
-			});
-		}
+		// 	$('.product-info__tabs-content').slick({
+		// 	  slidesToShow: 1,
+		// 	  slidesToScroll: 1,
+		// 	  arrows:false,
+		// 		dots: false,
+		// 	  infinite: false,
+		// 	  asNavFor: '.product-info__tabs-list',
+		// 	  focusOnSelect: true,
+		// 	  responsive: [
+		// 			{
+		// 				breakpoint: 991,
+		// 				settings: {
+		// 	  				adaptiveHeight: true
+		// 				}	
+		// 			}
+		// 		]
+		// 	});
+		// }
 		// END product-info tabs slider
 
 		// tabs

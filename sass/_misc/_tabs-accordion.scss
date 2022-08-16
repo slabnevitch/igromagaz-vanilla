@@ -3,7 +3,7 @@
 		@media screen and (min-width: $checkpoint){
 			display: flex;
 		}
-		li{
+		.accordion__item{
 			list-style-type: none;
 		}
 	}
@@ -13,6 +13,8 @@
 		}
 	}
 	.tab-content{
+		
+			list-style-type: none;
 		@media screen and (max-width: $checkpoint){
 			display: none;
 		}
@@ -24,5 +26,5 @@
 	}
 }
 .combine{
-	@include tabs-acc($sm);
+	@include tabs-acc($md);
 }

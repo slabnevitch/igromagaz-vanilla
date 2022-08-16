@@ -3146,28 +3146,7 @@ textarea.input {
   }
 }
 
-.tabs-buttons {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.tab-content,
-.tabs-buttons li {
-  list-style-type: none;
-}
-
-.tab {
-  text-decoration: none;
-  display: block;
-}
-
-.tab.active {
-  background-color: pink;
-}
-
-@media screen and (min-width: 767.98px) {
+@media screen and (min-width: 991px) {
   .combine .tabs__buttons {
     display: -webkit-box;
     display: -webkit-flex;
@@ -3176,7 +3155,7 @@ textarea.input {
   }
 }
 
-.combine .tabs__buttons li {
+.combine .tabs__buttons .accordion__item {
   list-style-type: none;
 }
 
@@ -3184,13 +3163,17 @@ textarea.input {
   background-color: pink;
 }
 
-@media screen and (max-width: 767.98px) {
+.combine .tab-content {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 991px) {
   .combine .tab-content {
     display: none;
   }
 }
 
-@media screen and (min-width: 767.98px) {
+@media screen and (min-width: 991px) {
   .combine .accordion__content {
     display: none;
   }

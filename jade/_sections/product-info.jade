@@ -3,10 +3,10 @@
 		.product-info__tabs-header
 			- var tabs = ['Информация о товаре', 'Характеристики', 'Инструкции'];
 			._tabs.accordion.combine(#id='tabs' data-accordion='')
-				ul.tabs-buttons
+				ul.tabs__buttons
 					each item, i in tabs
 						li.accordion__item.product-info__tabs-item
-							div(class= i==0 ? "tab tab--active accordion__link" : "tab accordion__link")
+							div(class= i==0 ? "tab active accordion__link" : "tab accordion__link")
 								h2= item
 							.accordion__content.hidden
 				ul
@@ -89,17 +89,15 @@
 								ul
 									each item in min
 										li= item
-								li.tab-content.hidden
-									.replaced-tab-content
-										| ITEM_3 Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты.
 
 					li.tab-content.hidden
-						.product-info__block
-							.product-info__title Чтобы начать играть нужно:
+						.replaced-tab-content
+							.product-info__block
+								.product-info__title Чтобы начать играть нужно:
 
-							-var olo = ['Купить лицензионный ключ Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК)','После оплаты, вы моментально* получите ключ (cd key) Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК) на е-mail, указанный в заказе и в личный кабинет в магазине','Скачайте и установите Rockstar Games Launcher (если еще не установлен).','Войдите в свой Rockstar Games аккаунт или создайте новый, если у вас его еще нет.В','В открывшееся поле введите ключ, полученный после оплаты.','После активации игра появится в списке "ИГРЫ" и вы сможете скачать её в Rockstar Games Launcher.'];
-								ol
-									each item in olo
-										li= item
+								-var olo = ['Купить лицензионный ключ Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК)','После оплаты, вы моментально* получите ключ (cd key) Grand Theft Auto V (ГТА 5) + Premium GTA + Online (ключ для ПК) на е-mail, указанный в заказе и в личный кабинет в магазине','Скачайте и установите Rockstar Games Launcher (если еще не установлен).','Войдите в свой Rockstar Games аккаунт или создайте новый, если у вас его еще нет.В','В открывшееся поле введите ключ, полученный после оплаты.','После активации игра появится в списке "ИГРЫ" и вы сможете скачать её в Rockstar Games Launcher.'];
+									ol
+										each item in olo
+											li= item
 
-					.product-info__note * — Ключи по предзаказам будут доставлены за день или в день выхода игры
+								.product-info__note * — Ключи по предзаказам будут доставлены за день или в день выхода игры

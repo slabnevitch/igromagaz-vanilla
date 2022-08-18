@@ -626,7 +626,7 @@ line-height: 22px;
 	}
 	&:last-child{
 		.combine{
-			@include tabs-acc($md);
+			@include tabs-acc($xs);
 			.product-info__tabs-link.active{
 				background-color: transparent;
 			}

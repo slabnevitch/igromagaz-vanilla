@@ -1,6 +1,6 @@
 .product-info
 	.wrapper
-		.product-info__tabs-header
+		//- .product-info__tabs-header
 			- var tabs = ['Информация о товаре', 'Характеристики', 'Инструкции'];
 			._tabs.accordion.combine( data-accordion='' data-point="sm")
 				ul.tabs__buttons.product-info__tabs-list
@@ -104,7 +104,7 @@
 
 		.product-info__tabs-header
 			- var tabs = ['Информация о товаре', 'Характеристики', 'Инструкции'];
-			._tabs.accordion.combine(data-accordion='' data-point="md")
+			._tabs.accordion.combine(data-accordion='' data-point="xs")
 				ul.tabs__buttons.product-info__tabs-list
 					each item, i in tabs
 						li.accordion__item.product-info__tabs-item
@@ -203,3 +203,5 @@
 											li= item
 
 								.product-info__note * — Ключи по предзаказам будут доставлены за день или в день выхода игры
+
+	

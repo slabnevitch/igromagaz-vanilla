@@ -1,10 +1,10 @@
 (function() {
 
   var  points = {
-    lg: 1199,
-    md: 991,
+    lg: 1199.98,
+    md: 991.98,
     sm: 767.98,
-    xs: 576,
+    xs: 575.98,
     xss: 480,
     xsss: 375,
     min: 360,
@@ -32,7 +32,7 @@
         //   return;
         // }
         e.preventDefault();
-        
+
         var target = e.target.closest('.tab'),
           parent = target.closest('._tabs'),
           items = parent.querySelectorAll('.tab-content'),
@@ -71,8 +71,10 @@
         e.preventDefault();
         var content = this.nextElementSibling,
         accordionList = e.target.closest('.accordion');
+         console.log(content)
         slideToggle(content, duration);
 
+        console.log(this)
         if(accordionList.hasAttribute('data-accordion')){
           slideSiblings(this, duration);
         }
@@ -196,7 +198,7 @@
   if(document.querySelector('.combine') !== null){
     Array.prototype.slice.call(document.querySelectorAll('.combine'))
       .forEach(function(elem) {
-       new Combine(elem).init(elem); // аргумент checkpoint должен соответствовать $checkpoint в _tabs-accordion.scss
+       new Combine(elem).init(elem);
       });
   }
 })();

@@ -439,6 +439,7 @@ line-height: 39px;
 			line-height: 29px;
 		}
 	}
+	
 }
 .versions-page-card__tabs {
 	display: flex;
@@ -614,10 +615,27 @@ line-height: 22px;
 	// overflow-x: auto;
 	// margin-right: -20px;
 	// max-width: calc(100% + 20px);
+	&:first-child{
+		.combine{
+			@include tabs-acc($sm);
+			.product-info__tabs-link.active{
+				background-color: transparent;
+			}
+		}
+		
+	}
+	&:last-child{
+		.combine{
+			@include tabs-acc($md);
+			.product-info__tabs-link.active{
+				background-color: transparent;
+			}
+		}
+	}
 
 }
 .product-info__tabs-list {
-	display: flex;
+	// display: flex;
 	margin-bottom: 27px;
 	// white-space: nowrap;
 	// 	@include max-screen($md){
@@ -688,7 +706,18 @@ line-height: 22px;
 		}
 	}
 }
-.tabs__link {}
+.product-info__tabs-link{
+	&.active{
+		background-color: transparent;
+		h2{
+			color: $text;
+				
+		}
+	}
+}
+.combine .tab.active{
+	background-color: transparent;
+}
 .tabs__content {}
 .product-info__tabs-content {
 	.slick-track{

@@ -75,6 +75,7 @@ function Accordion(accordionList, duration/*, disableCheckPoint*/){
   },
   this.slideDown = function(target, duration){
     // target.style.removeProperty('display');
+    console.log('target  ' + target.classList)
     target.classList.remove('hidden');
     let isHidden = target.classList.contains('hidden');
     if (isHidden) target.classList.remove('hidden');;

@@ -115,6 +115,7 @@
         target.parentNode.classList.remove('active');
       },
       slideDown = function(target, duration){
+        console.log('target  ' + target.classList)
         target.classList.remove('hidden');
         let isHidden = target.classList.contains('hidden');
         if (isHidden) target.classList.remove('hidden');;

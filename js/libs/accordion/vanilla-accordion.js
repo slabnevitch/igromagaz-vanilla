@@ -29,7 +29,7 @@ function Accordion(accordionList, duration/*, disableCheckPoint*/){
     }
 	e.preventDefault();
     var content = this.nextElementSibling;
-    console.log(content)
+
     _self.slideToggle(content, duration);
 
     if(accordionList.hasAttribute('data-accordion')){
@@ -75,7 +75,6 @@ function Accordion(accordionList, duration/*, disableCheckPoint*/){
   },
   this.slideDown = function(target, duration){
     // target.style.removeProperty('display');
-    console.log('target  ' + target.classList)
     target.classList.remove('hidden');
     let isHidden = target.classList.contains('hidden');
     if (isHidden) target.classList.remove('hidden');;

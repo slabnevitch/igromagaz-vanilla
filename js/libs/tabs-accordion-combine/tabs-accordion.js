@@ -70,11 +70,10 @@
         }
         e.preventDefault();
         var content = this.nextElementSibling,
-        accordionList = e.target.closest('.accordion');
-         console.log(content)
+        accordionList = e.target.closest('.combine');
+        
         slideToggle(content, duration);
 
-        console.log(this)
         if(accordionList.hasAttribute('data-accordion')){
           slideSiblings(this, duration);
         }
@@ -115,7 +114,6 @@
         target.parentNode.classList.remove('active');
       },
       slideDown = function(target, duration){
-        console.log('target  ' + target.classList)
         target.classList.remove('hidden');
         let isHidden = target.classList.contains('hidden');
         if (isHidden) target.classList.remove('hidden');;

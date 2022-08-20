@@ -199,11 +199,11 @@ padding-bottom: 52.25%;
 }
 
 // показ спойлеров на определенном разрешении
-// .accordion__content.hidden{
-// 	@include min-screen($sm){
-// 		display: block;
-// 	}
-// }
+.accordion__content.hidden{
+	@include min-screen($sm){
+		display: block;
+	}
+}
 
 // service ui elements styles
 @import "_misc/_tabs-accordion";

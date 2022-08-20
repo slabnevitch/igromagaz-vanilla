@@ -91,10 +91,15 @@ header.header
 
 		.header__catalog.catalog-header
 			.wrapper-smart
-				.wrapper-flex
+				aside.multilevel-panel
+					button.toggle-mnu.on#multilevel-panel-close
+						span
+					.multilevel-panel__back
+						button#menu-back Назад
+				.wrapper-flex.multilevel-menu
 					.catalog-header__column
 						ul.catalog-header__list
-							li.catalog-header__item
+							li.catalog-header__item.with-submenu
 								a(href="#").catalog-header__link Игры на ПК: ключи активации
 								ul.catalog-header__sublist
 									- var sublist1 = ['Steam','Uplay','Battle.net','Rockstar','Origin','GOG.com','Другое'];
@@ -103,7 +108,7 @@ header.header
 												a(href="#").catalog-header__sublink= item
 					.catalog-header__column
 						ul.catalog-header__list
-							li.catalog-header__item
+							li.catalog-header__item.with-submenu
 								a(href="#").catalog-header__link Карты пополнения счета
 								ul.catalog-header__sublist
 									- var sublist2 = ['Xbox Live', 'PlayStation Network', 'iTunes Store', 'EA Play (EA Access)', 'Steam Wallet'];
@@ -121,7 +126,7 @@ header.header
 								a(href="#").catalog-header__link Коллекционные издания
 
 						ul.catalog-header__list
-							li.catalog-header__item
+							li.catalog-header__item.with-submenu
 								a(href="#").catalog-header__link Игровые аксессуары
 								ul.catalog-header__sublist
 									- var sublist3 = ['Stem-аксессуары','PC аксессуары','Другие аксессуары'];

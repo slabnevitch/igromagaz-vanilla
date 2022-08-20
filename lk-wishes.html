@@ -158,10 +158,16 @@
         </div>
         <div class="header__catalog catalog-header">
           <div class="wrapper-smart">
-            <div class="wrapper-flex">
+            <aside class="multilevel-panel">
+              <button id="multilevel-panel-close" class="toggle-mnu on"><span></span></button>
+              <div class="multilevel-panel__back">
+                <button id="menu-back">Назад</button>
+              </div>
+            </aside>
+            <div class="wrapper-flex multilevel-menu">
               <div class="catalog-header__column">
                 <ul class="catalog-header__list">
-                  <li class="catalog-header__item"><a href="#" class="catalog-header__link">Игры на ПК: ключи активации</a>
+                  <li class="catalog-header__item with-submenu"><a href="#" class="catalog-header__link">Игры на ПК: ключи активации</a>
                     <ul class="catalog-header__sublist">
                       <li class="catalog-header__subitem"><a href="#" class="catalog-header__sublink">Steam</a></li>
                       <li class="catalog-header__subitem"><a href="#" class="catalog-header__sublink">Uplay</a></li>
@@ -176,7 +182,7 @@
               </div>
               <div class="catalog-header__column">
                 <ul class="catalog-header__list">
-                  <li class="catalog-header__item"><a href="#" class="catalog-header__link">Карты пополнения счета</a>
+                  <li class="catalog-header__item with-submenu"><a href="#" class="catalog-header__link">Карты пополнения счета</a>
                     <ul class="catalog-header__sublist">
                       <li class="catalog-header__subitem"><a href="#" class="catalog-header__sublink">Xbox Live</a></li>
                       <li class="catalog-header__subitem"><a href="#" class="catalog-header__sublink">PlayStation Network</a></li>
@@ -195,7 +201,7 @@
                   <li class="catalog-header__item"><a href="#" class="catalog-header__link">Коллекционные издания</a></li>
                 </ul>
                 <ul class="catalog-header__list">
-                  <li class="catalog-header__item"><a href="#" class="catalog-header__link">Игровые аксессуары</a>
+                  <li class="catalog-header__item with-submenu"><a href="#" class="catalog-header__link">Игровые аксессуары</a>
                     <ul class="catalog-header__sublist">
                       <li class="catalog-header__subitem"><a href="#" class="catalog-header__sublink">Stem-аксессуары</a></li>
                       <li class="catalog-header__subitem"><a href="#" class="catalog-header__sublink">PC аксессуары</a></li>
@@ -504,7 +510,9 @@
     
     <script src="js/libs/jquery/jquery-3.1.1.min.js"></script>
     
+    <script src="js/libs/multilevel-panel/multilevel-panel.js"></script>
     <script src="js/libs/dynamic-adaptive/da.min.js"></script>
+    
     <script src="js/libs/fstdropdown/fstdropdown.min.js"></script>
     <script src="js/libs/svg4everybody/svg4everybody.min.js" async onload="svg4everybody();"></script>
     

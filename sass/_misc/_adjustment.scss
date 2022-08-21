@@ -198,12 +198,15 @@ padding-bottom: 52.25%;
 		}
 }
 
-// показ спойлеров на определенном разрешении
-.accordion__content.hidden{
-	@include min-screen($sm){
-		display: block;
-	}
-}
+// показ спойлеров на определенном разрешении. Включать только при установленном аттрибуте data-breakpoint="" у .accordion
+// .accordion:not(.combine){
+// 	.accordion__content.hidden{
+// 		@include min-screen($md){
+// 			display: block;
+// 		}
+// 	}
+
+// }
 
 // service ui elements styles
 @import "_misc/_tabs-accordion";

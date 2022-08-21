@@ -1556,8 +1556,8 @@ img.mfp-img {
 }
 
 .multilevel-menu li a {
-  display: block;
-  color: #fff;
+  /*display: block;*/
+  /*color: #fff;*/
   text-decoration: none;
 }
 

@@ -1598,8 +1598,8 @@ img.mfp-img {
 }
 
 .multilevel-menu li a {
-  display: block;
-  color: #fff;
+  /*display: block;*/
+  /*color: #fff;*/
   text-decoration: none;
 }
 
@@ -3321,12 +3321,6 @@ textarea.input {
     background-color: rgba(255, 255, 255, 0.72);
     -webkit-backdrop-filter: blur(31px);
     backdrop-filter: blur(31px);
-  }
-}
-
-@media only screen and (min-width: 767.98px) {
-  .accordion__content.hidden {
-    display: block;
   }
 }
 

@@ -17,7 +17,8 @@ jQuery(function() {
 
 		// catalog toggle
 		if($target.attr('id') === 'catalog-toggle' || $target.closest('#catalog-toggle').length > 0){
-			$('html').toggleClass('catalog-visible');
+			$('html').toggleClass('catalog-visible multilevel-panel-opened');
+			// $('html').toggleClass('multilevel-panel-opened');
 		}
 		else if(!$target.hasClass('header__catalog') && $target.closest('.header__catalog').length === 0){
 			$('html').removeClass('catalog-visible');
@@ -268,30 +269,6 @@ jQuery(function() {
 	}
 	 // END video-popup
 
-		// Accordeon-----------------------------------
-		if($('.acordeon-link').length > 0){
-			$('.acordeon-link').click(function(e) {
-				e.preventDefault();
-				var $currentItem = $(this).closest('.acordeon-item');
-				if($currentItem.hasClass('acordeon-item-with-sublist')){
-
-					$currentItem.find('.acordeon-sublist')
-					.stop(true, true)
-					.slideToggle(500);
-					// $currentItem.siblings()
-					// .find('.acordeon-sublist')
-					// .stop(true, true)
-					// .slideUp();
-
-					$currentItem.toggleClass('active');
-
-				}else{
-					return;
-				}
-			});
-
-		}
-		// end Accordeon-----------------------------------
 
 		// product-card sluders
 		if($('.page-card__slider').length > 0 && $('.page-card__slider-nav').length > 0){

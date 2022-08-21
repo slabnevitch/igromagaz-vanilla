@@ -40,8 +40,8 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .multilevel-menu li a {
-  display: block;
-  color: #fff;
+  /*display: block;*/
+  /*color: #fff;*/
   text-decoration: none;
 }
 

@@ -45,14 +45,14 @@ block content
 					
 					button.btn.btn-bg-accent.page-catalog__toggle Показать фильтры
 					
-					ul.acordeon-list.page-catalog__filters-list
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-							.acordeon-link.catalog-filter-item__header
+					ul.accordion.page-catalog__filters-list
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+							.accordion__link.catalog-filter-item__header
 								.catalog-filter-item__name Цена
 								.catalog-filter-item__arrow
 									+icon('arrow-down')
 							
-							ul.acordeon-sublist.catalog-filter-item__content
+							ul.accordion__content.catalog-filter-item__content
 								li.catalog-filter-item__inputs
 									label.catalog-filter-item__label
 										span.catalog-filter-item__label-val от
@@ -62,13 +62,13 @@ block content
 										span.catalog-filter-item__label-val до
 										input(autocomplete="off" type="text" name="name" class="catalog-filter-item__input" placeholder="6000")
 
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-							.acordeon-link.catalog-filter-item__header
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+							.accordion__link.catalog-filter-item__header
 								.catalog-filter-item__name Наличие
 								.catalog-filter-item__arrow
 									+icon('arrow-down')
 							
-							ul.acordeon-sublist.catalog-filter-item__content
+							ul.accordion__content.catalog-filter-item__content
 								- var checks1 = ['В наличии','Предзаказ','Под заказ'];
 								li
 									each check, i in checks1
@@ -78,13 +78,13 @@ block content
 												+icon('check')
 											span.check-label__text= check
 
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-							.acordeon-link.catalog-filter-item__header
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+							.accordion__link.catalog-filter-item__header
 								.catalog-filter-item__name Жанры
 								.catalog-filter-item__arrow
 									+icon('arrow-down')
 							
-							ul.acordeon-sublist.catalog-filter-item__content
+							ul.accordion__content.catalog-filter-item__content.hidden
 								- var checks2 = ['Шутеры' ,'Гонки','Экшены','Приключения','Ролевые'];
 								li
 									each check, i in checks2
@@ -94,13 +94,13 @@ block content
 												+icon('check')
 											span.check-label__text= check
 
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-							.acordeon-link.catalog-filter-item__header
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+							.accordion__link.catalog-filter-item__header
 								.catalog-filter-item__name Дата выхода
 								.catalog-filter-item__arrow
 									+icon('arrow-down')
 							
-							ul.acordeon-sublist.catalog-filter-item__content
+							ul.accordion__content.catalog-filter-item__content.hidden
 								li
 
 									- var years = ['Все','2022','2021','2020','2019','2018','2017','2016','2015','2014','2012','2010'];
@@ -122,13 +122,13 @@ block content
 													+icon('check')
 												span.check-label__text= check
 
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-							.acordeon-link.catalog-filter-item__header
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+							.accordion__link.catalog-filter-item__header
 								.catalog-filter-item__name Язык
 								.catalog-filter-item__arrow
 									+icon('arrow-down')
 							
-							ul.acordeon-sublist.catalog-filter-item__content
+							ul.accordion__content.catalog-filter-item__content.hidden
 								- var checks4 = ['Русский' ,'Русские субтитры','Английский'];
 								li
 									each check, i in checks4
@@ -138,13 +138,13 @@ block content
 												+icon('check')
 											span.check-label__text= check
 
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-								.acordeon-link.catalog-filter-item__header
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+								.accordion__link.catalog-filter-item__header
 									.catalog-filter-item__name Издатель
 									.catalog-filter-item__arrow
 										+icon('arrow-down')
 								
-								ul.acordeon-sublist.catalog-filter-item__content
+								ul.accordion__content.catalog-filter-item__content.hidden
 									li
 										- var dilers = ['Все','Activision','BANDAI NAMCO Entertainment','Blizzard Entertainment','CD PROJEKT RED','Deep Silver','FromSoftware Inc','FromSoftware, Inc','Rockstar Games','Ubisoft','Xbox Game Studios'];
 										
@@ -155,13 +155,13 @@ block content
 												else
 													option(value="0" + i)= item
 
-						li.acordeon-item.acordeon-item-with-sublist.catalog-filter-item.active
-							.acordeon-link.catalog-filter-item__header
+						li.accordion__item.acordeon-item-with-sublist.catalog-filter-item.active
+							.accordion__link.catalog-filter-item__header
 								.catalog-filter-item__name Возрастное ограничение
 								.catalog-filter-item__arrow
 									+icon('arrow-down')
 							
-							ul.acordeon-sublist.catalog-filter-item__content
+							ul.accordion__content.catalog-filter-item__content.hidden
 								- var checks5 = ['6+' ,'12+','16+', '18+'];
 								li
 									each check, i in checks5
@@ -171,8 +171,8 @@ block content
 												+icon('check')
 											span.age= check
 
-						li.acordeon-item.catalog-filter-item
-							.acordeon-link.catalog-filter-item__header
+						li.accordion__item.catalog-filter-item
+							.accordion__link.catalog-filter-item__header
 								a(href="#").link Очистить всё
 
 					button.btn.btn-bg-accent.page-catalog__toggle Показать фильтры
@@ -345,7 +345,7 @@ block page-scripts
 	//- script(src="js/libs/lazysizes/lazysizes.min.js")	
 		
 	//- accordion--------------------------
-	//- script(src="js/libs/accordion/vanilla-accordion.js")
+	script(src="js/libs/accordion/vanilla-accordion.js")
 		
 	//- tabs--------------------------
 	//- script(src="js/libs/tabs/tabs-pure.js")

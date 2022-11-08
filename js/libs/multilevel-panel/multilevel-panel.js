@@ -86,8 +86,8 @@
   // требуется подключить сперва dynamic-adaptive, а уже после него multilevel-panel.js!
   new MultilevelPanel({ 
       backAsCurrent: true, //boolean |указание заголовка текущей ссылки вместо "назад"
-      activeBreakpoint: 1200, //number | ширина экрана, при которой перестают раскрываться вложенные меню в левой панели
-    setDynamicBreakpoint: 1200, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель
+      activeBreakpoint: 1100, //number | ширина экрана, при которой перестают раскрываться вложенные меню в левой панели
+    setDynamicBreakpoint: 1100, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель
                                // работает только при da.init() в common.js либо при добавлении атрибута data-da к десктопному меню заранее
     bodyFreeze: true // boolean 
   });

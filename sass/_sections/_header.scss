@@ -831,4 +831,31 @@ line-height: 27px;
 
 	}
 }
+.multilevel-menu {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: auto auto;
+
+	.catalog-header__item{
+		&:first-child{
+			grid-row: span 2;
+		}
+		&:last-child{
+			grid-row: span 2;
+			grid-column: 3/1;
+			width: auto;
+		}
+		&:nth-child(){
+		}
+		&:not(:last-child){
+		
+		}
+	}
+}
+.multilevel-menu li a {
+	@include max-screen($lg){
+		color: #fff;
+		display: block;
+	}
+}
 /*--------------------END header----------------------*/ 

@@ -1562,6 +1562,10 @@ img.mfp-img {
   z-index: 99;
 }
 
+.multilevel-panel .multilevel-menu {
+  display: block;
+}
+
 .multilevel-panel .toggle-mnu {
   position: absolute;
   margin-top: 0;
@@ -1598,8 +1602,8 @@ img.mfp-img {
 }
 
 .multilevel-menu li a {
-  /*display: block;*/
-  /*color: #fff;*/
+  display: block;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -5589,12 +5593,6 @@ blockquote {
 .catalog-header__sublist {
   margin-top: 10px;
   padding-left: 10px;
-}
-
-@media only screen and (max-width: 991.98px) {
-  .catalog-header__sublist {
-    display: none;
-  }
 }
 
 .catalog-header__subitem {

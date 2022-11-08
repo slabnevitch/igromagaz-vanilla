@@ -792,9 +792,9 @@ font-family: $semi;
 	margin-top: 10px;
 	padding-left: 10px;
 
-	@include max-screen($md){
-		display: none;
-	}
+	// @include max-screen($md){
+	// 	display: none;
+	// }
 }
 .catalog-header__subitem {
 	list-style-type: none;

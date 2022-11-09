@@ -67,7 +67,7 @@
       }
     },
     this.close = function() {
-      htmlDoc.classList.remove('multilevel-panel-opened', 'freeze');
+      htmlDoc.classList.remove('multilevel-panel-opened', 'freeze', 'catalog-visible');
       _self.reset();
     },
     this.reset = function(){
@@ -84,7 +84,7 @@
   }
   // Use
   // требуется подключить сперва dynamic-adaptive, а уже после него multilevel-panel.js!
-  new MultilevelPanel({ 
+ var panel = new MultilevelPanel({ 
       backAsCurrent: true, //boolean |указание заголовка текущей ссылки вместо "назад"
       activeBreakpoint: 1100, //number | ширина экрана, при которой перестают раскрываться вложенные меню в левой панели
     setDynamicBreakpoint: 1100, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель

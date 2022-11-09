@@ -17,11 +17,16 @@ jQuery(function() {
 
 		// catalog toggle
 		if($target.attr('id') === 'catalog-toggle' || $target.closest('#catalog-toggle').length > 0){
-			$('html').toggleClass('catalog-visible multilevel-panel-opened');
+			$('html').toggleClass('catalog-visible');
+			if(screen.width <= 1100){
+				$('html').toggleClass('multilevel-panel-opened');
+
+			}
 			// $('html').toggleClass('multilevel-panel-opened');
 		}
-		else if(!$target.hasClass('header__catalog') && $target.closest('.header__catalog').length === 0){
-			$('html').removeClass('catalog-visible');
+		else if(!$target.hasClass('header__catalog') && $target.closest('.header__catalog').length === 0 && $target.attr('id') !== 'multilevel-panel-close'){
+			$('html').removeClass('catalog-visible multilevel-panel-opened');
+			// panel.reset();
 		}
 		// END catalog toggle
 

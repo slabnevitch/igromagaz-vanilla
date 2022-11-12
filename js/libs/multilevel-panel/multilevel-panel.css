@@ -109,6 +109,11 @@
   margin-right: 10px;
   vertical-align: middle;
 }
+#multilevel-panel-close.toggle-mnu span,
+#multilevel-panel-close.toggle-mnu span:before,
+#multilevel-panel-close.toggle-mnu span:after{
+  background-color: #fff;
+}
 
 /*--------------------superfis styles reset----------------------*/
 .multilevel-panel .sf-menu {

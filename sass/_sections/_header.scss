@@ -731,7 +731,14 @@ font-family: $semi;
 
 }
 .wrapper-smart {}
-.wrapper-flex {}
+.wrapper-flex {
+	&.multilevel-menu{
+		@include max-screen(1100px){
+			display: none;
+		}  
+		
+	}
+}
 .catalog-header__column {
 	@include col();
 	@include size(3);
@@ -880,7 +887,7 @@ line-height: 27px;
 	}
 }
 
-.multilevel-menu li a {
+.multilevel-panel .multilevel-menu li a {
 	@include max-screen(1100px){
 		color: #fff;
 		display: block;

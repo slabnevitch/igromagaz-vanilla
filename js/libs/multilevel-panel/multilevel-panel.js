@@ -15,38 +15,45 @@
         backAsCurrent: opts.backAsCurrent !== undefined ? opts.backAsCurrent : false,
         activeBreakpoint: opts.activeBreakpoint !== undefined ? opts.activeBreakpoint : null,
         setDynamicBreakpoint: opts.setDynamicBreakpoint !== undefined ? opts.setDynamicBreakpoint : null,
-        bodyFreeze: opts.bodyFreeze !== undefined ? opts.bodyFreeze : null
+        bodyFreeze: opts.bodyFreeze !== undefined ? opts.bodyFreeze : null,
+        multicolumn: opts.multicolumn, 
+        multicolumnClass: opts.multicolumnClass, 
+        multiLiItemClass:  opts.multiLiItemClass 
       };
     
     this.init = function(){
 
       if(options.setDynamicBreakpoint && !options.multicolumn){
         multilevelMenuElem.setAttribute('data-da', 'multilevel-panel,'+options.setDynamicBreakpoint+',2');
+        this.eventsBinding(links);
       }
       if(options.multicolumn){
         this.createPanelHtml();
       }
-      this.eventsBinding();
+      
     },
     this.createPanelHtml = function() {
-      if(options.multicolumnClass && options.multiLiItemClass){
-        var copiedItems = multilevelMenuElem.querySelectorAll('.' + options.multicolumnClass)
-          .querySelectorAll('.' + options.multiLiItemClass);
-          // panelUl = document.createElement('ul');
 
-        // panel.appendChild(panelUl);
+      if(options.multicolumnClass && options.multiLiItemClass){
+
+        var copiedItems = multilevelMenuElem.querySelectorAll('.' + options.multiLiItemClass);
+          panelUl = document.createElement('ul');
+          panelUl.className = 'multilevel-menu';
+
         
         for(var i=0; i<copiedItems.length; i++){
-          var copy = copiedItems[i].cloneNode();
+          var copy = copiedItems[i].cloneNode(true);
           panelUl.appendChild(copy);
         }
-
+        panel.appendChild(panelUl);
+        this.eventsBinding(panel.querySelectorAll('.multilevel-menu .with-submenu > a'));
+        console.log(panel.querySelectorAll('.multilevel-panel .multilevel-menu .with-submenu > a'));
         }else{
           console.log('multilevel-panel error!: не указаны классы для колонок и li для копирования');
         }
     },
-    this.eventsBinding = function(){
-      links.forEach(item => {
+    this.eventsBinding = function(menuLinks){
+      menuLinks.forEach(item => {
         item.addEventListener('click', this.linksClick);
       });
       backButton.addEventListener('click', this.backClick);
@@ -109,11 +116,12 @@
       backAsCurrent: true, //boolean |указание заголовка текущей ссылки вместо "назад"
       activeBreakpoint: 1100, //number | ширина экрана, при которой перестают раскрываться вложенные меню в левой панели
     // setDynamicBreakpoint: 1100, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель
+                                  // применять только если структура десктопного меню соответствует мобильному
                                // работает только при da.init() в common.js либо при добавлении атрибута data-da к десктопному меню заранее
-    bodyFreeze: true, // boolean ,
-    multicolumn: true,
-    multicolumnClass: 'catalog-header__column',
-    multiLiItemClass: 'catalog-header__item'
+    // bodyFreeze: true, // boolean ,
+    multicolumn: true, //true только в случае различия хтмл в десктопном и мобильном меню (например, при наличии доп. дивов-колонок, в которые завернуты эл-ты. десктопного меню)
+    multicolumnClass: 'catalog-header__column',// класс для дива-обертки над эл-ми. десктопного меню
+    multiLiItemClass: 'catalog-header__item' //класс для "<li>" десктопного меню, которые необходимо скопировать в моб. меню-панель
   });
 
 })();

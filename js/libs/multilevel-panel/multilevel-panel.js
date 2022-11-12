@@ -112,6 +112,7 @@
   }
   // Use
   // требуется подключить сперва dynamic-adaptive, а уже после него multilevel-panel.js!
+ // панель открывается путем добавления к <html> класса "multilevel-panel-opened"
  var panel = new MultilevelPanel({ 
       backAsCurrent: true, //boolean |указание заголовка текущей ссылки вместо "назад"
       activeBreakpoint: 1100, //number | ширина экрана, при которой перестают раскрываться вложенные меню в левой панели

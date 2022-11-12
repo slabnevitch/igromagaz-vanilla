@@ -1559,8 +1559,8 @@ img.mfp-img {
   border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 
-.multilevel-menu li a {
-  /*display: block;*/
+.multilevel-panel .multilevel-menu li a {
+  display: block;
   text-decoration: none;
 }
 
@@ -1575,8 +1575,8 @@ img.mfp-img {
 .multilevel-panel .multilevel-menu ul {
   padding-left: 10px;
   padding-right: 10px;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
   -webkit-transform: translate3D(-100%, 0, 0);
   -ms-transform: translate3D(-100%, 0, 0);
   transform: translate3D(-100%, 0, 0);
@@ -1630,7 +1630,7 @@ img.mfp-img {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 10px 15px 0 10px;
+  padding: 10px 40px 0 10px;
   height: 40px;
   display: none;
   position: fixed;
@@ -1647,6 +1647,12 @@ img.mfp-img {
   display: flex;
 }
 
+.multilevel-panel__back button {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .multilevel-panel__back button:before {
   content: "<";
   display: inline-block;
@@ -1654,10 +1660,25 @@ img.mfp-img {
   vertical-align: middle;
 }
 
-#multilevel-panel-close.toggle-mnu span,
+#multilevel-panel-close.toggle-mnu span {
+  background-color: transparent;
+}
+
 #multilevel-panel-close.toggle-mnu span:before,
 #multilevel-panel-close.toggle-mnu span:after {
   background-color: #fff;
+}
+
+#multilevel-panel-close.toggle-mnu.on span:before {
+  -webkit-transform: rotate(45deg) translate(0px, 0px);
+  -ms-transform: rotate(45deg) translate(0px, 0px);
+  transform: rotate(45deg) translate(0px, 0px);
+}
+
+#multilevel-panel-close.toggle-mnu.on span:after {
+  -webkit-transform: rotate(-45deg) translate(7px, -7px);
+  -ms-transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /*--------------------superfis styles reset----------------------*/

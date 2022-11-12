@@ -96,40 +96,51 @@ header.header
 						span
 					.multilevel-panel__back
 						button#menu-back Назад
-				ul.wrapper-flex.multilevel-menu
-						li.catalog-header__item.with-submenu
-								a(href="#").catalog-header__link Игры на ПК: ключи активации
+				.wrapper-flex.multilevel-menu
+					.catalog-header__column
+						ul.catalog-header__list
+							li.catalog-header__item.with-submenu
+									a(href="#").catalog-header__link Игры на ПК: ключи активации
+									ul.catalog-header__sublist
+										- var sublist1 = ['Steam','Uplay','Battle.net','Rockstar','Origin','GOG.com','Другое'];
+											each item in sublist1
+												li.catalog-header__subitem
+													a(href="#").catalog-header__sublink= item
+					
+					.catalog-header__column
+						ul.catalog-header__list
+							li.catalog-header__item.with-submenu
+									a(href="#").catalog-header__link Карты пополнения счета
+									ul.catalog-header__sublist
+										- var sublist2 = ['Xbox Live', 'PlayStation Network', 'iTunes Store', 'EA Play (EA Access)', 'Steam Wallet'];
+											each item in sublist2
+												li.catalog-header__subitem
+													a(href="#").catalog-header__sublink= item
+
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Игры для PlayStation 4
+					
+					.catalog-header__column
+						ul.catalog-header__list
+							li.catalog-header__item
+									a(href="#").catalog-header__link Коллекционные издания
+
+						ul.catalog-header__list
+							li.catalog-header__item.with-submenu
+								a(href="#").catalog-header__link Игровые аксессуары
 								ul.catalog-header__sublist
-									- var sublist1 = ['Steam','Uplay','Battle.net','Rockstar','Origin','GOG.com','Другое'];
-										each item in sublist1
+									- var sublist3 = ['Stem-аксессуары','PC аксессуары','Другие аксессуары'];
+										each item in sublist3
 											li.catalog-header__subitem
 												a(href="#").catalog-header__sublink= item
-						li.catalog-header__item.with-submenu
-								a(href="#").catalog-header__link Карты пополнения счета
-								ul.catalog-header__sublist
-									- var sublist2 = ['Xbox Live', 'PlayStation Network', 'iTunes Store', 'EA Play (EA Access)', 'Steam Wallet'];
-										each item in sublist2
-											li.catalog-header__subitem
-												a(href="#").catalog-header__sublink= item
 
-						li.catalog-header__item
-							a(href="#").catalog-header__link Игры для PlayStation 4
+						ul.catalog-header__list
+							li.catalog-header__item
+								a(href="#").catalog-header__link Консоли Xbox One
 					
+					.catalog-header__column.catalog-header__column
 						li.catalog-header__item
-								a(href="#").catalog-header__link Коллекционные издания
-
-						li.catalog-header__item.with-submenu
-							a(href="#").catalog-header__link Игровые аксессуары
-							ul.catalog-header__sublist
-								- var sublist3 = ['Stem-аксессуары','PC аксессуары','Другие аксессуары'];
-									each item in sublist3
-										li.catalog-header__subitem
-											a(href="#").catalog-header__sublink= item
-
-						li.catalog-header__item
-							a(href="#").catalog-header__link Консоли Xbox One
-					
-						li.catalog-header__item.catalog-header__column
 							.catalog-header__img
 								img(src="img/catalog-x-box.png" alt="alt")
 	

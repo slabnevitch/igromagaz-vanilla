@@ -2,6 +2,7 @@
   function MultilevelPanel(opts){
     var _self = this,
       htmlDoc = document.documentElement,
+      panel = document.querySelector('.multilevel-panel'),
       multilevelMenuElem = document.querySelector('.multilevel-menu'),
       links = Array.prototype.slice.call(document.querySelectorAll('.multilevel-menu__parent > a, .multilevel-menu .with-submenu > a')),
       panel = document.querySelector('.multilevel-panel'),
@@ -19,11 +20,31 @@
     
     this.init = function(){
 
-      if(options.setDynamicBreakpoint){
+      if(options.setDynamicBreakpoint && !options.multicolumn){
         multilevelMenuElem.setAttribute('data-da', 'multilevel-panel,'+options.setDynamicBreakpoint+',2');
       }
+      if(options.multicolumn){
+        this.createPanelHtml();
+      }
       this.eventsBinding();
-    }
+    },
+    this.createPanelHtml = function() {
+      if(options.multicolumnClass && options.multiLiItemClass){
+        var copiedItems = multilevelMenuElem.querySelectorAll('.' + options.multicolumnClass)
+          .querySelectorAll('.' + options.multiLiItemClass);
+          // panelUl = document.createElement('ul');
+
+        // panel.appendChild(panelUl);
+        
+        for(var i=0; i<copiedItems.length; i++){
+          var copy = copiedItems[i].cloneNode();
+          panelUl.appendChild(copy);
+        }
+
+        }else{
+          console.log('multilevel-panel error!: не указаны классы для колонок и li для копирования');
+        }
+    },
     this.eventsBinding = function(){
       links.forEach(item => {
         item.addEventListener('click', this.linksClick);
@@ -87,9 +108,12 @@
  var panel = new MultilevelPanel({ 
       backAsCurrent: true, //boolean |указание заголовка текущей ссылки вместо "назад"
       activeBreakpoint: 1100, //number | ширина экрана, при которой перестают раскрываться вложенные меню в левой панели
-    setDynamicBreakpoint: 1100, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель
+    // setDynamicBreakpoint: 1100, //nubmer |ширина экрана, при которой da.js переносит десктопное меню в левую панель
                                // работает только при da.init() в common.js либо при добавлении атрибута data-da к десктопному меню заранее
-    bodyFreeze: true // boolean 
+    bodyFreeze: true, // boolean ,
+    multicolumn: true,
+    multicolumnClass: 'catalog-header__column',
+    multiLiItemClass: 'catalog-header__item'
   });
 
 })();
